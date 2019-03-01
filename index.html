@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>demo</title>
+    <style>
+        @page{size:a4}
+        body{
+            width:1080px;
+            height:100%;
+            min-height: calc(100vh);
+            background: white;
+        }
+        html, body, p,h1,h2,h3 {
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrapper-box {
+            /*width:1080px;*/
+            height:100%;
+            padding-top:30px;
+            box-sizing: border-box;
+            background: white;
+        }
+
+        ul, li {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+
+        }
+
+        .page-title, .display-name {
+            text-align: center;
+            margin-bottom:20px;
+        }
+
+        .display-name {
+            color: #999;
+
+        }
+
+        .pd-box{
+            padding:0 20px;
+            background: white;
+        }
+
+        .code-box {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-bottom:10px;
+
+        }
+
+        .info-box{
+            line-height:30px;
+            margin-bottom:10px;
+        }
+        .info-box b{
+            color:rgb(45,91,146)
+        }
+
+        .pre-money{
+            display: flex;
+            flex-direction: row;
+            margin-bottom:10px;
+            font-weight: bold;
+            font-size:16px;
+        }
+        .pre-money p:first-child{
+            margin-right:50px;
+        }
+
+        .tab-box {
+            padding:10px 20px;
+            margin-bottom:10px;
+            box-sizing: border-box;
+            width:100%;
+        }
+
+        .tab-title {
+            display: flex;
+            flex-direction: row;
+            font-size: 18px;
+            font-weight: bold;
+            width:100%;
+        }
+
+        .tab-title li {
+            flex: 1;
+            line-height: 40px;
+        }
+
+        .desc-list {
+            width:100%;
+            margin-bottom:10px;
+        }
+
+        .desc-list li {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .desc-list li span {
+            flex: 1;
+            line-height: 40px;
+        }
+
+        .total-box p {
+            display: flex;
+            flex-direction: row;
+            line-height: 40px;
+        }
+
+        .total-box p b {
+            flex: 4;
+        }
+
+        .total-box p span {
+            flex: 1;
+        }
+
+
+        .now-money{
+            width:100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            margin-bottom:50px;
+            font-weight: bold;
+            font-size:16px;
+        }
+        .now-money p {
+            margin-left:50px;
+        }
+        .yellow{
+            color:rgb(253,158,54)
+        }
+
+
+        .bottom-box {
+            text-align: right;
+            line-height:30px;
+        }
+
+        .lineW{
+            width:100%;
+            height:1px;
+            background: #000;
+        }
+        .line{
+            width:100%;
+            height:1px;
+            background: #c3c3c3;
+        }
+        .btn{
+            width:200px;
+            height:36px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="wrapper-box"  id="pdfContainer">
+    <div class="pd-box">
+        <div>
+            <img src="./logo.png" style="max-width:120px;vertical-align: top;" alt="">
+        </div>
+        <h2 class="page-title">上海爱照护养老服务有限公司对账单</h2>
+        <p class="display-name">上海普陀区海普苑长照</p>
+        <div class="code-box">
+            <p>
+                <b>合同编号</b><span>12345678978789989</span>
+            </p>
+            <p>
+                <b>合同日期</b><span>2012-02-23 - 2019-02-02</span>
+            </p>
+            <p>
+                <b>结算日期</b><span>2019-04-02</span>
+            </p>
+        </div>
+        <div class="info-box">
+            <p><b>长者姓名：</b><span>张三</span></p>
+            <p><b>家庭住址：</b><span>张三</span></p>
+            <p><b>联系电话：</b><span>13620676550</span></p>
+        </div>
+        <div class="pre-money">
+            <p>上期余额：￥0.00 </p>
+            <p>押金：￥10000.00</p>
+        </div>
+    </div>
+    <div class="tab-box">
+        <div class="lineW"></div>
+        <ul class="tab-title">
+            <li>项目</li>
+            <li>数量</li>
+            <li>单价/元</li>
+            <li>折扣</li>
+            <li>金额</li>
+        </ul>
+        <div class="line"></div>
+        <ul class="desc-list">
+            <li>
+                <span>预缴款</span>
+                <span>25</span>
+                <span>-</span>
+                <span>0</span>
+                <span>￥123456</span>
+            </li>
+            <li>
+                <span>预缴款</span>
+                <span>25</span>
+                <span>-</span>
+                <span>0</span>
+                <span>￥123456</span>
+            </li>
+            <li>
+                <span>预缴款</span>
+                <span>25</span>
+                <span>-</span>
+                <span>0</span>
+                <span>￥123456</span>
+            </li>
+        </ul>
+        <div class="line"></div>
+        <div class="total-box">
+            <h3>本期总计</h3>
+            <p>
+                <b>预缴：</b><span>￥123456</span>
+            </p>
+            <p>
+                <b>扣款：</b><span>￥123456</span>
+            </p>
+            <p>
+                <b>退款：</b><span>￥123456</span>
+            </p>
+
+        </div>
+        <div class="lineW"></div>
+    </div>
+    <div class="pd-box">
+        <div class="now-money">
+            <p>账户余额：￥0.00 </p>
+            <p>押金：￥<span class="yellow">10000.00</span></p>
+        </div>
+        <div class="bottom-box">
+            <p>上海爱照护养老服务有限公司对账单</p>
+            <p>400-006-3300 | http://izhaohu.com</p>
+        </div>
+    </div>
+
+</div>
+<button class="btn" onclick="downloadPdf()">转化</button>
+
+<script src="./pageToPdf.js"></script>
+<script src="./jspdf.debug.js"></script>
+
+<script>
+
+function downloadPdf() {
+    html2canvas(document.getElementById("pdfContainer"), {
+        onrendered : function(canvas) {
+            //a4纸的尺寸[595.28,841.89]，html页面生成的canvas在pdf中图片的宽高
+            var pageData = canvas.toDataURL('image/jpeg', 1.0);
+            var pdf = new jsPDF('p', 'mm', 'a4');
+            //如果有右边内容未展示则调整 208,220  这两个参数
+            pdf.addImage(pageData, 'JPEG', 0, 0, 208, 208 / canvas.width * canvas.height);
+            var title="测试"; //导出pdf的名称
+            pdf.save('' + title + '.pdf');
+        }
+    })
+}
+
+</script>
+</body>
+</html>
