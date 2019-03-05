@@ -21,7 +21,7 @@
 
         .wrapper-box {
             /*width:1080px;*/
-            height:100%;
+            /*height:100%;*/
             padding-top:30px;
             box-sizing: border-box;
             background: white;
@@ -161,6 +161,9 @@
         .btn{
             width:200px;
             height:36px;
+            position: absolute;
+            right:0;
+            top:0;
         }
     </style>
 </head>
@@ -225,6 +228,19 @@
                 <span>-</span>
                 <span>0</span>
                 <span>￥123456</span>
+            </li><li>
+                <span>预缴款</span>
+                <span>25</span>
+                <span>-</span>
+                <span>0</span>
+                <span>￥123456</span>
+            </li>
+            <li>
+                <span>预缴款</span>
+                <span>25</span>
+                <span>-</span>
+                <span>0</span>
+                <span>￥123456</span>
             </li>
         </ul>
         <div class="line"></div>
@@ -255,7 +271,7 @@
     </div>
 
 </div>
-<button class="btn" onclick="downloadPdf()">转化</button>
+<!--<button class="btn" onclick="btnDownloadPageBypfd2()">转化</button>-->
 
 <script src="./jquery.js"></script>
 <script src="./jspdf.debug.js"></script>
@@ -278,8 +294,9 @@ function downloadPdf() {
 }
 
 //比较清晰的方法
-function btnDownloadPageBypfd2(pdfContainer, titles){ //参数是'#pdf_container' 或 '.pdf_container',注意带前缀
-    $("#"+pdfContainer).addClass('pdf'); //pdf的css在下一个代码中,作用是使得打印的内容能在pdf中完全显示
+function btnDownloadPageBypfd2(){ //参数是'#pdf_container' 或 '.pdf_container',注意带前缀
+    var pdfContainer="pdfContainer";
+    $("#pdfContainer").addClass('pdf'); //pdf的css在下一个代码中,作用是使得打印的内容能在pdf中完全显示
     var cntElem = document.getElementById(pdfContainer);
     var shareContent = cntElem; //需要截图的包裹的（原生的）DOM 对象
     var width = shareContent.offsetWidth; //获取dom 宽度
@@ -311,19 +328,18 @@ function btnDownloadPageBypfd2(pdfContainer, titles){ //参数是'#pdf_container
                 /****分页******/
                 var pageHeight = 841.89;//一页高度
                 var leftHeight = height * 0.75;//未打印内容高度
+//                var leftHeight = height * 0.75;//未打印内容高度
                 var position = 0;//页面偏移
                 var imgWidth = width;
                 var imgHeight =   height;
-                console.log("imgWidth="+imgWidth);
-                console.log("imgHeight="+imgHeight);
                 var doc = new jsPDF('p', 'pt', 'a4');
                 if(pageHeight >= leftHeight){//不需要分页，页面高度>=未打印内容高度
                     console.log("不需要分页");
-                    doc.addImage(imgData, 'jpeg', 30, 0,  530, 530 / canvas.width * canvas.height);
+                    doc.addImage(imgData, 'jpeg', 30, 0,  550 , 800 / canvas.width * canvas.height);
                 }else{//需要分页
                     console.log("需要分页");
                     while(leftHeight>0){
-                        doc.addImage(imgData, 'JPEG', 30, position,    530, 530 / canvas.width * canvas.height);
+                        doc.addImage(imgData, 'JPEG', 30, position, 550 , 800 / canvas.width * canvas.height);
                         leftHeight -= pageHeight;
                         position -= 841.89;
                         //避免添加空白页
@@ -333,7 +349,7 @@ function btnDownloadPageBypfd2(pdfContainer, titles){ //参数是'#pdf_container
                         }
                     }
                 }
-                doc.save(''+titles+'.pdf');//保存为pdf文件
+                doc.save('ceshi'+'.pdf');//保存为pdf文件
 
             }
         },
@@ -341,7 +357,7 @@ function btnDownloadPageBypfd2(pdfContainer, titles){ //参数是'#pdf_container
     });
     $('#'+pdfContainer).removeClass('pdf');
 }
-
+btnDownloadPageBypfd2()
 </script>
 </body>
 </html>
