@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>demo</title>
+    <style>
+        body{
+            height:100%;
+            min-height: calc(100vh);
+            background: white;
+
+        }
+        html, body, p,h1,h2,h3 {
+            margin: 0;
+            padding: 0;
+        }
+        .main-box{
+            width:calc(80vw);
+            min-width:1080px;
+            margin:0 auto;
+        }
+        .wrapper-box {
+            padding:0 30px;
+            box-sizing: border-box;
+            background: white;
+        }
+
+        ul, li {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+
+        }
+
+        .display-name {
+            color: #999;
+
+        }
+
+        .pd-box{
+            /*padding:0 20px;*/
+            background: white;
+        }
+
+        .code-box {
+            margin-bottom:10px;
+
+        }
+
+        .info-box{
+            line-height:30px;
+            margin-bottom:10px;
+        }
+        .info-box b{
+            color:rgb(45,91,146)
+        }
+
+        .tab-box{
+            padding:10px 20px 5px;
+            /*margin-bottom:10px;*/
+            box-sizing: border-box;
+            width:100%;
+            background: #ccc;
+        }
+        .tab-box.tt{
+            padding-top:20px;
+        }
+        .tab-box.bb{
+            padding-bottom:20px;
+        }
+
+        .tab-title {
+            display: flex;
+            flex-direction: row;
+            font-size: 18px;
+            font-weight: bold;
+            width:100%;
+        }
+
+        .tab-title li {
+            flex: 1;
+            line-height: 40px;
+        }
+
+        .desc-list {
+            width:100%;
+            margin-bottom:10px;
+        }
+
+        .desc-list li {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .desc-list li span {
+            flex: 1;
+            line-height: 40px;
+        }
+
+        .total-box {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            line-height: 40px;
+            font-weight:bold;
+        }
+
+
+        .yellow{
+            color:rgb(253,158,54)
+        }
+
+
+        .bottom-box {
+            text-align: right;
+            line-height:30px;
+        }
+
+        .lineW{
+            width:100%;
+            height: 2px;
+            background: #000;
+        }
+        .line{
+            width:100%;
+            height: 1px;
+            background: #999;
+        }
+        .remark{
+            line-height:30px;
+            color:#2b2b2b;
+        }
+        .flex-row{
+            display: flex;
+            flex-direction: row;
+        }
+        .flex-row.space{
+            line-height:36px;
+            justify-content: space-between;
+        }
+        .table-title{
+            text-align: center;
+            font-size:20px;
+            font-weight:bold;
+            margin-bottom:15px;
+        }
+        .left-title{
+            font-size:18px;
+            font-weight:bold;
+            line-height:30px;
+        }
+        .back{
+            background: #fff;
+            padding:15px;
+        }
+        .btn{
+            width:100px;
+            height:36px;
+            text-align: center;
+            line-height:36px;
+            border-radius: 6px;
+            margin-bottom:50px;
+            margin-top:50px;
+            float: right;
+            cursor: pointer;
+            background:rgb(62,154,242);
+            color:#fff;
+            margin-right:30px;
+        }
+
+        .page-title{
+            line-height:40px;
+            border-bottom:1px solid #ccc;
+            font-size:18px;
+            font-weight:bold;
+            padding-left:30px;
+        }
+        .right-text{
+            text-align: right;
+            line-height:36px;
+            padding-right:30px;
+        }
+        .qrcode .desc{
+            text-align: center;
+        }
+        .qrcode .img-box{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-bottom:20px;
+        }
+        .qrcode .img-box img{
+            margin-bottom:15px;
+        }
+        .qrcode .img-box a{
+            cursor: pointer;
+        }
+        .waring-box{
+            color:#999;
+            padding:0 30px;
+            line-height:24px;
+            margin-bottom:30px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="main-box">
+    <div class="wrapper-top">
+        <div class="page-title">账单支付</div>
+        <div class="right-text">账单金额：<span class="yellow">￥123456</span></div>
+        <div class="qrcode">
+            <div class="img-box">
+                <img src="./code.png" alt="">
+                <a class="yellow">切换为线下支付</a>
+            </div>
+            <div class="desc">
+                请使用拉卡拉POS机的“爱照护收款”功能扫描此二维码，<br> 然后刷客户的银行卡收取本订单服务费用。
+            </div>
+        </div>
+        <div class="waring-box">
+            <p>温馨提示：</p>
+            1. 客户也可以选择通过“爱照护”APP支付未付款的合同订单，前提是客户在“爱照护”APP中关注了对应的长者。在手机上，客户可以选择支付宝支付，或者出示二维码供拉卡拉POS机扫描后刷银行卡。
+            <br>
+            2. 如果客户没有支付宝也不能提供银行卡，只能通过转账、汇款等途径支付的，请更换为线下汇款方式继续支付。
+        </div>
+    </div>
+    <div class="wrapper-box" >
+        <div class="tab-box tt">
+            <div class="back">
+                <div class="left-title">账单基本信息</div>
+                <div class="line" style="margin-bottom: 10px;"></div>
+                <div class="code-box">
+                    <b>账单周期：</b><span>2019/02/12-2019/03/12</span>
+                </div>
+                <div class="info-box">
+                    <p><b>长者姓名：</b><span>张三</span></p>
+                    <p><b>家庭住址：</b><span>张三</span></p>
+                    <p><b>联系电话：</b><span>13620676550</span></p>
+                </div>
+                <div class="left-title">消费明细</div>
+                <div class="lineW"></div>
+                <ul class="tab-title">
+                    <li>项目</li>
+                    <li>数量</li>
+                    <li>单价/元</li>
+                    <li>金额</li>
+                </ul>
+                <div class="line"></div>
+                <ul class="desc-list">
+                    <li>
+                        <span>预缴款</span>
+                        <span>25</span>
+                        <span>-</span>
+                        <span>￥123456</span>
+                    </li>
+                    <li>
+                        <span>预缴款</span>
+                        <span>25</span>
+                        <span>-</span>
+                        <span>￥123456</span>
+                    </li>
+                    <li>
+                        <span>预缴款</span>
+                        <span>25</span>
+                        <span>-</span>
+                        <span>￥123456</span>
+                    </li><li>
+                    <span>预缴款</span>
+                    <span>25</span>
+                    <span>-</span>
+                    <span>￥123456</span>
+                </li>
+                    <li>
+                        <span>预缴款</span>
+                        <span>25</span>
+                        <span>-</span>
+                        <span>￥123456</span>
+                    </li>
+                </ul>
+                <div class="line"></div>
+                <div class="total-box">
+                    <span>总计消费</span> <span>￥123456</span>
+                </div>
+                <div class="line"></div>
+                <div class="remark">备注：测试测试测试测试测试测试</div>
+            </div>
+
+        </div>
+        <div class="tab-box">
+            <div class="back">
+                <div class="table-title">需消费明细</div>
+                <div class="lineW"></div>
+                <div class="left-title">月结算费用</div>
+                <ul class="desc-list">
+                    <li>
+                        <span>长护险自费</span>
+                        <span>25</span>
+                        <span>-</span>
+                        <span>￥123456</span>
+                    </li>
+                    <li>
+                        <span>押金补全</span>
+                        <span>25</span>
+                        <span>-</span>
+                        <span>￥123456</span>
+                    </li>
+                    <li>
+                        <span>床位上浮</span>
+                        <span>25</span>
+                        <span>-</span>
+                        <span>￥123456</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="tab-box">
+            <div class="back">
+                <div class="left-title">欠款订单</div>
+                <ul class="desc-list">
+                    <li>
+                        <span>2期订单</span>
+                        <span>25</span>
+                        <span>-</span>
+                        <span>￥123456</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="tab-box bb">
+            <div class="back">
+                <div class="left-title">下棋预缴订单</div>
+                <ul class="desc-list">
+                    <li>
+                        <span>3期订单</span>
+                        <span>25</span>
+                        <span>-</span>
+                        <span>￥123456</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="btn">打印</div>
+</div>
+
+
+
+</body>
+</html>
