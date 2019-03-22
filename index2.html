@@ -407,7 +407,7 @@
                         while(leftHeight>0){
                             doc.addImage(imgData, 'JPEG', 30, position, 550 , 800 / canvas.width * canvas.height);
                             leftHeight -= pageHeight;
-                            position -= 841.89;
+                            position -= 841.89 + 30;
                             //避免添加空白页
                             if(leftHeight > 0){
                                 console.log("添加空白页");
@@ -423,7 +423,7 @@
         });
         $('#'+pdfContainer).removeClass('pdf');
     }
-    //btnDownloadPageBypfd2()
+    btnDownloadPageBypfd2()
 </script>
 </body>
 </html>
