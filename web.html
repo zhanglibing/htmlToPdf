@@ -7,24 +7,26 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>demo</title>
     <style>
-        body{
-            height:100%;
-            width:1080px;
+        body {
+            height: 100%;
+            width: 1000px;
             min-height: calc(100vh);
             background: white;
 
         }
-        html, body, p,h1,h2,h3 {
+
+        html, body, p, h1, h2, h3 {
             margin: 0;
             padding: 0;
         }
+
         /*.main-box{*/
-            /*width:calc(80vw);*/
-            /*min-width:1080px;*/
-            /*margin:0 auto;*/
+        /*width:calc(80vw);*/
+        /*min-width:1080px;*/
+        /*margin:0 auto;*/
         /*}*/
         .wrapper-box {
-            padding:0 30px;
+             padding:0 30px;
             box-sizing: border-box;
             background: white;
         }
@@ -41,36 +43,39 @@
 
         }
 
-        .pd-box{
+        .pd-box {
             /*padding:0 20px;*/
             background: white;
         }
 
         .code-box {
-            margin-bottom:10px;
+            margin-bottom: 10px;
 
         }
 
-        .info-box{
-            line-height:30px;
-            margin-bottom:10px;
-        }
-        .info-box b{
-            color:rgb(45,91,146)
+        .info-box {
+            line-height: 30px;
+            margin-bottom: 10px;
         }
 
-        .tab-box{
-            padding:10px 20px 5px;
+        .info-box b {
+            color: rgb(45, 91, 146)
+        }
+
+        .tab-box {
+            padding: 10px 20px 5px;
             /*margin-bottom:10px;*/
             box-sizing: border-box;
-            width:100%;
+            width: 100%;
             background: #ccc;
         }
-        .tab-box.tt{
-            padding-top:20px;
+
+        .tab-box.tt {
+            padding-top: 20px;
         }
-        .tab-box.bb{
-            padding-bottom:20px;
+
+        .tab-box.bb {
+            padding-bottom: 20px;
         }
 
         .tab-title {
@@ -78,7 +83,7 @@
             flex-direction: row;
             font-size: 18px;
             font-weight: bold;
-            width:100%;
+            width: 100%;
         }
 
         .tab-title li {
@@ -87,8 +92,8 @@
         }
 
         .desc-list {
-            width:100%;
-            margin-bottom:10px;
+            width: 100%;
+            margin-bottom: 10px;
         }
 
         .desc-list li {
@@ -106,144 +111,172 @@
             flex-direction: row;
             justify-content: space-between;
             line-height: 40px;
-            font-weight:bold;
+            font-weight: bold;
         }
 
-
-        .yellow{
-            color:rgb(253,158,54)
+        .yellow {
+            color: rgb(253, 158, 54)
         }
-
 
         .bottom-box {
             text-align: right;
-            line-height:30px;
+            line-height: 30px;
         }
 
-        .lineW{
-            width:100%;
+        .lineW {
+            width: 100%;
             height: 2px;
             background: #000;
         }
-        .line{
-            width:100%;
+
+        .line {
+            width: 100%;
             height: 1px;
             background: #999;
         }
-        .remark{
-            line-height:30px;
-            color:#2b2b2b;
+
+        .remark {
+            line-height: 30px;
+            color: #2b2b2b;
         }
-        .flex-row{
+
+        .flex-row {
             display: flex;
             flex-direction: row;
         }
-        .flex-row.space{
-            line-height:36px;
+
+        .flex-row.space {
+            line-height: 36px;
             justify-content: space-between;
         }
-        .table-title{
+
+        .table-title {
             text-align: center;
-            font-size:20px;
-            font-weight:bold;
-            margin-bottom:15px;
-        }
-        .left-title{
-            font-size:18px;
-            font-weight:bold;
-            line-height:30px;
-        }
-        .back{
-            background: #fff;
-            padding:15px;
-        }
-        .btn{
-            width:100px;
-            height:36px;
-            text-align: center;
-            line-height:36px;
-            border-radius: 6px;
-            margin-bottom:50px;
-            margin-top:50px;
-            float: right;
-            cursor: pointer;
-            background:rgb(62,154,242);
-            color:#fff;
-            margin-right:30px;
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 15px;
         }
 
-        .page-title{
-            line-height:40px;
-            border-bottom:1px solid #ccc;
-            font-size:18px;
-            font-weight:bold;
-            padding-left:30px;
+        .left-title {
+            font-size: 18px;
+            font-weight: bold;
+            line-height: 30px;
         }
-        .right-text{
+
+        .back {
+            background: #fff;
+            padding: 15px;
+        }
+
+        .btn {
+            width: 100px;
+            height: 36px;
+            text-align: center;
+            line-height: 36px;
+            border-radius: 6px;
+            margin-bottom: 50px;
+            margin-top: 50px;
+            float: right;
+            cursor: pointer;
+            background: rgb(62, 154, 242);
+            color: #fff;
+            margin-right: 30px;
+        }
+
+        .page-title {
+            line-height: 40px;
+            border-bottom: 1px solid #ccc;
+            font-size: 18px;
+            font-weight: bold;
+            padding-left: 30px;
+        }
+
+        .right-text {
             text-align: right;
-            line-height:36px;
-            padding-right:30px;
+            line-height: 36px;
+            padding-right: 30px;
         }
-        .qrcode .desc{
+
+        .qrcode .desc {
             text-align: center;
         }
-        .qrcode .img-box{
+
+        .qrcode .img-box {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            margin-bottom:20px;
+            margin-bottom: 20px;
         }
-        .qrcode .img-box img{
-            margin-bottom:15px;
+
+        .qrcode .img-box img {
+            margin-bottom: 15px;
         }
-        .qrcode .img-box a{
+
+        .qrcode .img-box a {
             cursor: pointer;
         }
-        .waring-box{
-            color:#999;
-            padding:0 30px;
-            line-height:24px;
-            margin-bottom:30px;
+
+        .waring-box {
+            color: #999;
+            padding: 0 30px;
+            line-height: 24px;
+            margin-bottom: 30px;
         }
-        .online{
+
+        .online {
             display: block;
         }
-        .online.active{
+
+        .online.active {
             display: none;
         }
-        .offline{
+
+        .offline {
             display: none;
-            margin-bottom:20px;
-            padding:10px 30px;
+            margin-bottom: 20px;
+            padding: 10px 30px;
             box-sizing: border-box;
         }
-        .offline .yellow{
-            font-size:18px;
+
+        .offline .yellow {
+            font-size: 18px;
         }
-        .offline p{
-            line-height:30px;
+
+        .offline p {
+            line-height: 30px;
         }
-        .offline.active{
+
+        .offline.active {
             display: block;
         }
+
         .offline input {
-            width:100%;
-            padding-left:10px;
-            line-height:36px;
+            width: 100%;
+            padding-left: 10px;
+            line-height: 36px;
             box-sizing: border-box;
-            margin-bottom:20px;
+            margin-bottom: 20px;
         }
-        .offline .btn-box{
-            height:50px;
+
+        .offline .btn-box {
+            height: 50px;
             display: flex;
             flex-direction: row;
             justify-content: flex-end;
         }
-        .offline .btn-box .btn{
-            width:180px;
-            margin:0;
-            margin-left:30px;
+
+        .offline .btn-box .btn {
+            width: 180px;
+            margin: 0;
+            margin-left: 30px;
+        }
+
+        .offline-input{
+            border:1px solid #ccc;
+        }
+        .offline-input.active{
+            border:1px solid red;
         }
     </style>
 </head>
@@ -256,7 +289,7 @@
             <div class="right-text">账单金额：<span class="yellow">￥123456</span></div>
             <div class="qrcode">
                 <div class="img-box">
-                    <img src="./code.png" alt="">
+                    <!--<img src="./code.png" alt="">-->
                     <a class="yellow changePayment">切换为线下支付</a>
                 </div>
                 <div class="desc">
@@ -280,7 +313,7 @@
             2. 如果客户没有支付宝也不能提供银行卡，只能通过转账、汇款等途径支付的，请更换为线下汇款方式继续支付。
         </div>
     </div>
-    <div class="wrapper-box"  id="pdfContainer" >
+    <div class="wrapper-box" id="pdfContainer">
         <div class="tab-box tt">
             <div class="back">
                 <div class="left-title">账单基本信息</div>
@@ -308,67 +341,14 @@
                         <span>25</span>
                         <span>-</span>
                         <span>￥123456</span>
-                    </li> <li>
+                    </li>
+                    <li>
                         <span>预缴款</span>
                         <span>25</span>
                         <span>-</span>
                         <span>￥123456</span>
-                    </li> <li>
-                        <span>预缴款</span>
-                        <span>25</span>
-                        <span>-</span>
-                        <span>￥123456</span>
-                    </li> <li>
-                        <span>预缴款</span>
-                        <span>25</span>
-                        <span>-</span>
-                        <span>￥123456</span>
-                    </li> <li>
-                        <span>预缴款</span>
-                        <span>25</span>
-                        <span>-</span>
-                        <span>￥123456</span>
-                    </li> <li>
-                        <span>预缴款</span>
-                        <span>25</span>
-                        <span>-</span>
-                        <span>￥123456</span>
-                    </li> <li>
-                        <span>预缴款</span>
-                        <span>25</span>
-                        <span>-</span>
-                        <span>￥123456</span>
-                    </li> <li>
-                        <span>预缴款</span>
-                        <span>25</span>
-                        <span>-</span>
-                        <span>￥123456</span>
-                    </li> <li>
-                        <span>预缴款</span>
-                        <span>25</span>
-                        <span>-</span>
-                        <span>￥123456</span>
-                    </li> <li>
-                        <span>预缴款</span>
-                        <span>25</span>
-                        <span>-</span>
-                        <span>￥123456</span>
-                    </li> <li>
-                        <span>预缴款</span>
-                        <span>25</span>
-                        <span>-</span>
-                        <span>￥123456</span>
-                    </li> <li>
-                        <span>预缴款</span>
-                        <span>25</span>
-                        <span>-</span>
-                        <span>￥123456</span>
-                    </li> <li>
-                        <span>预缴款</span>
-                        <span>25</span>
-                        <span>-</span>
-                        <span>￥123456</span>
-                    </li> <li>
+                    </li>
+                    <li>
                         <span>预缴款</span>
                         <span>25</span>
                         <span>-</span>
@@ -385,12 +365,79 @@
                         <span>25</span>
                         <span>-</span>
                         <span>￥123456</span>
-                    </li><li>
-                    <span>预缴款</span>
-                    <span>25</span>
-                    <span>-</span>
-                    <span>￥123456</span>
-                </li>
+                    </li>
+                    <li>
+                        <span>预缴款</span>
+                        <span>25</span>
+                        <span>-</span>
+                        <span>￥123456</span>
+                    </li>
+                    <li>
+                        <span>预缴款</span>
+                        <span>25</span>
+                        <span>-</span>
+                        <span>￥123456</span>
+                    </li>
+                    <li>
+                        <span>预缴款</span>
+                        <span>25</span>
+                        <span>-</span>
+                        <span>￥123456</span>
+                    </li>
+                    <li>
+                        <span>预缴款</span>
+                        <span>25</span>
+                        <span>-</span>
+                        <span>￥123456</span>
+                    </li>
+                    <li>
+                        <span>预缴款</span>
+                        <span>25</span>
+                        <span>-</span>
+                        <span>￥123456</span>
+                    </li>
+                    <li>
+                        <span>预缴款</span>
+                        <span>25</span>
+                        <span>-</span>
+                        <span>￥123456</span>
+                    </li>
+                    <li>
+                        <span>预缴款</span>
+                        <span>25</span>
+                        <span>-</span>
+                        <span>￥123456</span>
+                    </li>
+                    <li>
+                        <span>预缴款</span>
+                        <span>25</span>
+                        <span>-</span>
+                        <span>￥123456</span>
+                    </li>
+                    <li>
+                        <span>预缴款</span>
+                        <span>25</span>
+                        <span>-</span>
+                        <span>￥123456</span>
+                    </li>
+                    <li>
+                        <span>预缴款</span>
+                        <span>25</span>
+                        <span>-</span>
+                        <span>￥123456</span>
+                    </li>
+                    <li>
+                        <span>预缴款</span>
+                        <span>25</span>
+                        <span>-</span>
+                        <span>￥123456</span>
+                    </li>
+                    <li>
+                        <span>预缴款</span>
+                        <span>25</span>
+                        <span>-</span>
+                        <span>￥123456</span>
+                    </li>
                     <li>
                         <span>预缴款</span>
                         <span>25</span>
@@ -462,39 +509,50 @@
         </div>
     </div>
 
-    <div class="btn printBtn" >打印</div>
+    <div class="btn printBtn">打印</div>
 </div>
 
-
+<script src="https://cdn.bootcss.com/html2canvas/0.5.0-beta4/html2canvas.js"></script>
 <script src="./jquery.js"></script>
 <script src="./jspdf.debug.js"></script>
 <script>
     $(function () {
         //切换为线下支付
-        $('.changePayment').on('click',function(){
+        $('.changePayment').on('click', function () {
             $('.online').addClass('active')
             $('.offline').addClass('active')
         })
         //切换为线上支付
-        $('.changeOnline').on('click',function(){
+        $('.changeOnline').on('click', function () {
             $('.online').removeClass('active')
             $('.offline').removeClass('active')
         })
 
+        $('.offline-input').on('keyup',function(){
+            if($(this).val()){
+                $('.offline-input').removeClass('active')
+            }else{
+                $('.offline-input').addClass('active')
+            }
+        })
         //财务确认
-        $('.submitBtn').on('click',function(){
+        $('.submitBtn').on('click', function () {
             //获取input框值
-            var remark=$('.offline-input').val();
+            var remark = $('.offline-input').val();
+            if(!remark){
+                //空值情况
+                return false;
+            }
 
         })
         //打印
-        $('.printBtn').on('click',function(){
-            window.scrollTo(0,$('.wrapper-top').height());
+        $('.printBtn').on('click', function () {
+            window.scrollTo(0, $('.wrapper-top').height());
             btnDownloadPageBypfd2()
         })
         //比较清晰的方法
-        function btnDownloadPageBypfd2(){ //参数是'#pdf_container' 或 '.pdf_container',注意带前缀
-            var pdfContainer="pdfContainer";
+        function btnDownloadPageBypfd2() { //参数是'#pdf_container' 或 '.pdf_container',注意带前缀
+            var pdfContainer = "pdfContainer";
             $("#pdfContainer").addClass('pdf'); //pdf的css在下一个代码中,作用是使得打印的内容能在pdf中完全显示
             var cntElem = document.getElementById(pdfContainer);
             var shareContent = cntElem; //需要截图的包裹的（原生的）DOM 对象
@@ -509,51 +567,114 @@
                 allowTaint: true,
                 taintTest: true,
                 canvas: canvas,
-                onrendered: function(canvas) {
+                onrendered: function (canvas) {
                     var context = canvas.getContext('2d');
                     // 【重要】关闭抗锯齿
                     context.mozImageSmoothingEnabled = false;
                     context.webkitImageSmoothingEnabled = false;
                     context.msImageSmoothingEnabled = false;
                     context.imageSmoothingEnabled = false;
-                    var imgData = canvas.toDataURL('image/jpeg',1.0);//转化成base64格式,可上网了解此格式
+                    var contentWidth = canvas.width;
+                    var contentHeight = canvas.height;
+                    //一页pdf显示html页面生成的canvas高度;
+                    var pageHeight = contentWidth / 592.28 * 841.89;
+                    //未生成pdf的html页面高度
+                    var leftHeight = contentHeight;
+                    //页面偏移
+                    var position = 0;
+                    //a4纸的尺寸[595.28,841.89]，html页面生成的canvas在pdf中图片的宽高
+                    var imgWidth = 595.28;
+                    var imgHeight = 592.28 / contentWidth * contentHeight;
+                    var doc = new jsPDF('', 'pt', 'a4');
+                    var imgData = canvas.toDataURL('image/jpeg', 1.0);//转化成base64格式,可上网了解此格式
                     var img = new Image();
                     img.src = imgData;
-                    img.onload = function() {
-                        img.width = img.width/2;   //因为在上面放大了2倍，生成image之后要/2
-                        img.height = img.height/2;
-                        img.style.transform="scale(0.5)";
-                        /****分页******/
-                        var position = $(document).scrollTop()-$('.wrapper-top').height();//页面偏移
-                        var pageHeight = 841.89;//一页高度
-                        var leftHeight = height * 0.75;//未打印内容高度
-//                        var imgWidth = width;
-//                        var imgHeight =   height;
-                        var doc = new jsPDF('p', 'pt', 'a4');
-                        if(pageHeight >= leftHeight){//不需要分页，页面高度>=未打印内容高度
+                    img.onload = function () {
+                        if (pageHeight >= leftHeight) {//不需要分页，页面高度>=未打印内容高度
                             console.log("不需要分页");
-                            doc.addImage(imgData, 'jpeg', 30, position,  550 , 800 / canvas.width * canvas.height);
-                        }else{//需要分页
+                            doc.addImage(imgData, 'jpeg', 0, 0, imgWidth, imgHeight);
+                        } else {//需要分页
                             console.log("需要分页");
-                            while(leftHeight>0){
-                                doc.addImage(imgData, 'JPEG', 30, position, 550 , 800 / canvas.width * canvas.height);
+                            while (leftHeight > 0) {
+                                doc.addImage(imgData, 'jpeg', 0, position, imgWidth, imgHeight);
                                 leftHeight -= pageHeight;
                                 position -= 841.89;
                                 //避免添加空白页
-                                if(leftHeight > 0){
+                                if (leftHeight > 0) {
                                     console.log("添加空白页");
                                     doc.addPage();
                                 }
                             }
                         }
-                        doc.save('ceshi'+'.pdf');//保存为pdf文件
-
+                        doc.save('ceshi' + '.pdf');//保存为pdf文件
                     }
                 },
                 background: "#fff", //一般把背景设置为白色，不然会出现图片外无内容的地方出现黑色，有时候还需要在CSS样式中设置div背景白色
             });
-            $('#'+pdfContainer).removeClass('pdf');
+            $('#' + pdfContainer).removeClass('pdf');
         }
+
+//        function btnDownloadPageBypfd2(){ //参数是'#pdf_container' 或 '.pdf_container',注意带前缀
+//            var pdfContainer="pdfContainer";
+//            $("#pdfContainer").addClass('pdf'); //pdf的css在下一个代码中,作用是使得打印的内容能在pdf中完全显示
+//            var cntElem = document.getElementById(pdfContainer);
+//            var shareContent = cntElem; //需要截图的包裹的（原生的）DOM 对象
+//            var width = shareContent.offsetWidth; //获取dom 宽度
+//            var height = shareContent.offsetHeight; //获取dom 高度
+//            var canvas = document.createElement("canvas"); //创建一个canvas节点
+//            var scale = 2; //定义任意放大倍数 支持小数
+//            canvas.width = width * scale; //定义canvas 宽度 * 缩放，在此我是把canvas放大了2倍
+//            canvas.height = height * scale; //定义canvas高度 *缩放
+//            canvas.getContext("2d").scale(scale, scale); //获取context,设置scale
+//            html2canvas(document.getElementById(pdfContainer), {
+//                allowTaint: true,
+//                taintTest: true,
+//                canvas: canvas,
+//                onrendered: function(canvas) {
+//                    var contentWidth = canvas.width;
+//                    var contentHeight = canvas.height;
+//                    var context = canvas.getContext('2d');
+//                    // 【重要】关闭抗锯齿
+//                    context.mozImageSmoothingEnabled = false;
+//                    context.webkitImageSmoothingEnabled = false;
+//                    context.msImageSmoothingEnabled = false;
+//                    context.imageSmoothingEnabled = false;
+//                    var imgData = canvas.toDataURL('image/jpeg',1.0);//转化成base64格式,可上网了解此格式
+//                    var img = new Image();
+//                    img.src = imgData;
+//                    img.onload = function() {
+//                        img.width = img.width/2;   //因为在上面放大了2倍，生成image之后要/2
+//                        img.height = img.height/2;
+//                        img.style.transform="scale(0.5)";
+//                        /****分页******/
+//                        var position = $(document).scrollTop()-$('.wrapper-top').height();//页面偏移
+//                        var pageHeight = 841.89;//一页高度
+//                        var leftHeight = height * 0.75;//未打印内容高度
+//                        var doc = new jsPDF('p', 'pt', 'a4');
+//                        if(pageHeight >= leftHeight){//不需要分页，页面高度>=未打印内容高度
+//                            console.log("不需要分页");
+//                            doc.addImage(imgData, 'jpeg', 0, 0,  550 , 800 / canvas.width * canvas.height);
+//                        }else{//需要分页
+//                            console.log("需要分页");
+//                            while(leftHeight>0){
+//                                doc.addImage(imgData, 'JPEG', 30, position,  550 , 800 / canvas.width * canvas.height);
+//                                leftHeight -= pageHeight;
+//                                position -= 841.89;
+//                                //避免添加空白页
+//                                if(leftHeight > 0){
+//                                    console.log("添加空白页");
+//                                    doc.addPage();
+//                                }
+//                            }
+//                        }
+//                        doc.save('ceshi'+'.pdf');//保存为pdf文件
+//
+//                    }
+//                },
+//                background: "#fff", //一般把背景设置为白色，不然会出现图片外无内容的地方出现黑色，有时候还需要在CSS样式中设置div背景白色
+//            });
+//            $('#'+pdfContainer).removeClass('pdf');
+//        }
     })
 </script>
 </body>
